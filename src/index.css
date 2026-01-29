@@ -68,7 +68,7 @@ h1 {
 
 /* Header Section */
 .accordion-header {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
