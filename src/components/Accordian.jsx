@@ -4,10 +4,9 @@ import { Card } from "./Card";
 
 export const Accordian = () => {
   const [dataApi, setDataApi] = useState([]);
-  const [isActiveId, setisActiveId] = useState(null); // Changed to null
-
+  const [isActiveId, setisActiveId] = useState(null); 
   const handleButton = (id) => {
-    // Agar wahi button click ho jo open hai, toh close (null) kar do, warna naya id set karo
+
     setisActiveId((prevId) => (prevId === id ? null : id));
   };
 
