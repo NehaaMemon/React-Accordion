@@ -16,15 +16,31 @@
   box-sizing: border-box;
 }
 
+
 body {
-  background-color: var(--bg-color);
-  font-family: "Urbanist", sans-serif;
-  color: var(--text-main);
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  padding-top: 5rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
+
+
+.section-accordion {
+  width: 90%;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 
 h1 {
   font-family: "Syne", sans-serif;
@@ -36,14 +52,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.section-accordion {
-  width: 90%;
-  max-width: 700px;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
+
 
 /* Accordion Item Styling */
 .accordion-item {
@@ -114,8 +123,32 @@ h1 {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   h1 { font-size: 2rem; }
   .accordion-question { font-size: 1rem; }
   .section-accordion { width: 95%; }
+} */
+@media (max-width: 480px) {
+  .section-accordion {
+    width: 95%;        /* Mobile par side spacing barabar rakhega */
+  }
+
+  .accordion-header {
+    padding: 1.5rem;   /* Mobile par padding thodi kam */
+  }
+
+  .accordion-question {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-accordion {
+    width: 92%;        /* Tablet par thoda aur wide */
+    margin-top: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem; /* Mobile par heading thodi choti */
+    padding: 1rem 1rem;   /* Heading side se chipke na */
+  }
 }
